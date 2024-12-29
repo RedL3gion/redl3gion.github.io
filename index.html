@@ -12,6 +12,23 @@
     <meta property="og:image" content="assets/smecksy_cat.jpg">
     <meta property="og:url" content="https://derealization.xyz">
     <meta name="og:type" content="website">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const title = " RedLegion | RedKillers";
+            const speed = 100;
+      
+            function moveTitle() {
+                let index = 0;
+                function updateTitle() {
+                    document.title = title.substring(index) + title.substring(0, index);
+                    index = (index + 1) % title.length;
+                }
+                setInterval(updateTitle, speed);
+            }
+      
+            moveTitle();
+        });
+      </script>
 </head>
 <style>
     .footer {
